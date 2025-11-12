@@ -8,28 +8,18 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class GehaltsrechnungApplication extends Application {
-    private static Stage _stage;
+    private static Stage primayStage;
     @Override
     public void start(Stage stage) throws IOException {
-        _stage = stage;
-        FXMLLoader fxmlLoader1 = new FXMLLoader(GehaltsrechnungApplication.class.getResource("signin-view.fxml"));
-
-        Scene scene1 = new Scene(fxmlLoader1.load(), 320, 240);
-
-        _stage.setTitle("SAPNew");
-        _stage.setScene(scene1);
-        _stage.show();
+        primayStage = stage;
+        primayStage.setTitle("SAPNew");
+        this.setScene("signin");
     }
 
-    public static void setScene() throws IOException {
-        FXMLLoader fxmlLoader2 = new FXMLLoader(GehaltsrechnungApplication.class.getResource("gehaltsrechnung-view.fxml"));
-
-        Scene scene2 = new Scene(fxmlLoader2.load(), 320, 240);
-        _stage.setScene(scene2);
-
-
-
-
-
+    public static void setScene(String name) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(GehaltsrechnungApplication.class.getResource(name + "-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        primayStage.setScene(scene);
+        primayStage.show();
     }
 }

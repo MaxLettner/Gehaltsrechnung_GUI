@@ -11,6 +11,6 @@ public class SigninController {
 
     @FXML
     protected void onSigninButtonClick() throws IOException {
-        GehaltsrechnungApplication.setScene();
+        GehaltsrechnungApplication.setScene("gehaltsabrechnung");
     }
 }
