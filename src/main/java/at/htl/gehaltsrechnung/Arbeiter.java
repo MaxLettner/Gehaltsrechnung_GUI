@@ -10,8 +10,6 @@ public class Arbeiter extends Mitarbeiter {
         super(name, abrechnungsperiode, 'L', stundenlohn * arbeitsstunden);
     }
 
-
-
     @Override
     public String toString(){
         return String.format(super.toString() + String.format(" Stundenlohn: %s Arbeitsstunden: %s ", _stundenlohn, _arbeitsstunden));
