@@ -1,10 +1,10 @@
 package at.htl.gehaltsrechnung;
 
-public class Angestellte extends Mitarbeiter {
+public class Angestellter extends Mitarbeiter {
     private long _gehalt;
 
 
-    Angestellte(String name, String abrechnungsperiode, long gehalt){
+    Angestellter(String name, String abrechnungsperiode, long gehalt){
         _gehalt = gehalt;
         super(name, abrechnungsperiode, 'G', gehalt);
     }
